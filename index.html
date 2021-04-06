@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>BeatMaker</title>
+  </head>
+  <body>
+    <section class="beatmaker">
+      <div class="container">
+        <h1 class="title">BeatMaker</h1>
+
+        <!-- Kick block -->
+
+        <div class="kick-block beat-block">
+          <div class="controls">
+            <h2 class="name">Kick</h2>
+            <img src="./img/play.svg" alt="play" class="microphone" />
+            <select name="beats" class="beats">
+              <option value="./allSounds/kick-808.mp3">kick-808</option>
+              <option value="./allSounds/kick-acoustic01.mp3">
+                kick-acoustic1
+              </option>
+              <option value="./allSounds/kick-acoustic02.mp3">
+                kick-acoustic2
+              </option>
+              <option value="./allSounds/kick-big.mp3">kick-big</option>
+              <option value="./allSounds/kick-classic.mp3">kick-classic</option>
+            </select>
+          </div>
+
+          <div class="pads">
+            <div class="pad kick-pad" data-id="0"></div>
+            <div class="pad kick-pad" data-id="1"></div>
+            <div class="pad kick-pad" data-id="2"></div>
+            <div class="pad kick-pad" data-id="3"></div>
+            <div class="pad kick-pad" data-id="4"></div>
+            <div class="pad kick-pad" data-id="5"></div>
+            <div class="pad kick-pad" data-id="6"></div>
+            <div class="pad kick-pad" data-id="7"></div>
+          </div>
+        </div>
+
+        <!-- Snare block -->
+
+        <div class="snare-block beat-block">
+          <div class="controls">
+            <h2 class="name">Snare</h2>
+            <img src="./img/play.svg" alt="play" class="microphone" />
+            <select name="beats" class="beats">
+              <option value="./allSounds/snare-808.mp3">snare-808</option>
+              <option value="./allSounds/snare-acoustic01.mp3">
+                snare-acoustic1
+              </option>
+              <option value="./allSounds/snare-acoustic02.mp3">
+                snare-acoustic2
+              </option>
+              <option value="./allSounds/snare-big.mp3">snare-big</option>
+              <option value="./allSounds/snare-analog.mp3">snare-analog</option>
+            </select>
+          </div>
+
+          <div class="pads">
+            <div class="pad snare-pad" data-id="0"></div>
+            <div class="pad snare-pad" data-id="1"></div>
+            <div class="pad snare-pad" data-id="2"></div>
+            <div class="pad snare-pad" data-id="3"></div>
+            <div class="pad snare-pad" data-id="4"></div>
+            <div class="pad snare-pad" data-id="5"></div>
+            <div class="pad snare-pad" data-id="6"></div>
+            <div class="pad snare-pad" data-id="7"></div>
+          </div>
+        </div>
+
+        <!-- Hihat block -->
+
+        <div class="hihat-block beat-block">
+          <div class="controls">
+            <h2 class="name">Hihat</h2>
+            <img src="./img/play.svg" alt="play" class="microphone" />
+            <select name="beats" class="beats">
+              <option value="./allSounds/hihat-808.mp3">hihat-808</option>
+              <option value="./allSounds/hihat-acoustic01.mp3">
+                hihat-acoustic1
+              </option>
+              <option value="./allSounds/hihat-acoustic02.mp3">
+                hihat-acoustic2
+              </option>
+              <option value="./allSounds/hihat-digital.mp3">
+                hihat-digital
+              </option>
+              <option value="./allSounds/hihat-analog.mp3">hihat-analog</option>
+            </select>
+          </div>
+
+          <div class="pads">
+            <div class="pad hihat-pad" data-id="0"></div>
+            <div class="pad hihat-pad" data-id="1"></div>
+            <div class="pad hihat-pad" data-id="2"></div>
+            <div class="pad hihat-pad" data-id="3"></div>
+            <div class="pad hihat-pad" data-id="4"></div>
+            <div class="pad hihat-pad" data-id="5"></div>
+            <div class="pad hihat-pad" data-id="6"></div>
+            <div class="pad hihat-pad" data-id="7"></div>
+          </div>
+        </div>
+
+        <!-- Clap block -->
+
+        <div class="clap-block beat-block">
+          <div class="controls">
+            <h2 class="name">Clap</h2>
+            <img src="./img/play.svg" alt="play" class="microphone" />
+            <select name="beats" class="beats">
+              <option value="./allSounds/clap-808.mp3">clap-808</option>
+              <option value="./allSounds/clap-crushed.mp3">clap-crushed</option>
+              <option value="./allSounds/clap-fat.mp3">clap-fat</option>
+              <option value="./allSounds/clap-slapper.mp3">clap-slapper</option>
+              <option value="./allSounds/clap-analog.mp3">clap-analog</option>
+            </select>
+          </div>
+
+          <div class="pads">
+            <div class="pad clap-pad" data-id="0"></div>
+            <div class="pad clap-pad" data-id="1"></div>
+            <div class="pad clap-pad" data-id="2"></div>
+            <div class="pad clap-pad" data-id="3"></div>
+            <div class="pad clap-pad" data-id="4"></div>
+            <div class="pad clap-pad" data-id="5"></div>
+            <div class="pad clap-pad" data-id="6"></div>
+            <div class="pad clap-pad" data-id="7"></div>
+          </div>
+        </div>
+
+        <!-- Perc block -->
+
+        <div class="perc-block beat-block">
+          <div class="controls">
+            <h2 class="name">Perc</h2>
+            <img src="./img/play.svg" alt="play" class="microphone" />
+            <select name="beats" class="beats">
+              <option value="./allSounds/perc-808.mp3">perc-808</option>
+              <option value="./allSounds/perc-chirpy.mp3">perc-chirpy</option>
+              <option value="./allSounds/perc-hollow.mp3">perc-hollow</option>
+              <option value="./allSounds/perc-laser.mp3">perc-laser</option>
+              <option value="./allSounds/perc-metal.mp3">perc-metal</option>
+            </select>
+          </div>
+
+          <div class="pads">
+            <div class="pad perc-pad" data-id="0"></div>
+            <div class="pad perc-pad" data-id="1"></div>
+            <div class="pad perc-pad" data-id="2"></div>
+            <div class="pad perc-pad" data-id="3"></div>
+            <div class="pad perc-pad" data-id="4"></div>
+            <div class="pad perc-pad" data-id="5"></div>
+            <div class="pad perc-pad" data-id="6"></div>
+            <div class="pad perc-pad" data-id="7"></div>
+          </div>
+        </div>
+
+        <!-- Tom block -->
+
+        <div class="tom-block beat-block">
+          <div class="controls">
+            <h2 class="name">Tom</h2>
+            <img src="./img/play.svg" alt="play" class="microphone" />
+            <select name="beats" class="beats">
+              <option value="./allSounds/tom-808.mp3">tom-808</option>
+              <option value="./allSounds/tom-acoustic01.mp3">
+                tom-acoustic1
+              </option>
+              <option value="./allSounds/tom-acoustic02.mp3">
+                tom-acoustic2
+              </option>
+              <option value="./allSounds/tom-analog.mp3">tom-analog</option>
+              <option value="./allSounds/tom-chiptune.mp3">tom-chiptune</option>
+            </select>
+          </div>
+
+          <div class="pads">
+            <div class="pad tom-pad" data-id="0"></div>
+            <div class="pad tom-pad" data-id="1"></div>
+            <div class="pad tom-pad" data-id="2"></div>
+            <div class="pad tom-pad" data-id="3"></div>
+            <div class="pad tom-pad" data-id="4"></div>
+            <div class="pad tom-pad" data-id="5"></div>
+            <div class="pad tom-pad" data-id="6"></div>
+            <div class="pad tom-pad" data-id="7"></div>
+          </div>
+        </div>
+
+        <div class="player-wrapper">
+          <div class="player">
+            <img src="./img/player.svg" alt="player" class="player-btn-img" />
+            <input
+              class="player-tempo"
+              type="range"
+              name="tempo"
+              value="150"
+              min="2"
+              max="300"
+            />
+            <p class="tempo">Tempo: <span class="tempo-num">150</span></p>
+            <img src="./img/close.svg" alt="close" class="close-btn" />
+          </div>
+          <img
+            src="./img/right-arrow.svg"
+            alt="right-arrow"
+            class="slide-arrow"
+          />
+        </div>
+        <audio
+          class="kick-audio"
+          src="./allSounds/kick-808.mp3"
+          type="audio/mpeg"
+        ></audio>
+        <audio
+          class="snare-audio"
+          src="./allSounds/snare-808.mp3"
+          type="audio/mpeg"
+        ></audio>
+        <audio
+          class="hihat-audio"
+          src="./allSounds/hihat-808.mp3"
+          type="audio/mpeg"
+        ></audio>
+        <audio
+          class="clap-audio"
+          src="./allSounds/clap-808.mp3"
+          type="audio/mpeg"
+        ></audio>
+        <audio
+          class="perc-audio"
+          src="./allSounds/perc-808.mp3"
+          type="audio/mpeg"
+        ></audio>
+        <audio
+          class="tom-audio"
+          src="./allSounds/tom-808.mp3"
+          type="audio/mpeg"
+        ></audio>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <p class="footer-text">made by .Y. <span class="date">2007</span></p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

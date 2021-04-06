@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+  color: #013d50;
+  background: url("../background.svg") no-repeat center center/cover;
+}
+
+.beatmaker {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 3rem;
+}
+
+.beatmaker .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media only screen and (min-width: 900px) {
+  .beatmaker .container {
+    padding: 3rem;
+  }
+}
+
+.beatmaker .container .title {
+  text-align: center;
+  color: #004d64;
+  font-size: 2.7rem;
+  margin-bottom: 3rem;
+}
+
+@media only screen and (min-width: 700px) {
+  .beatmaker .container .title {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .beatmaker .container .title {
+    margin-bottom: 5rem;
+  }
+}
+
+.beatmaker .container .beat-block {
+  width: 100%;
+  min-height: 10rem;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.beatmaker .container .beat-block .controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  margin-top: 2rem;
+}
+
+@media only screen and (min-width: 900px) {
+  .beatmaker .container .beat-block .controls {
+    justify-content: space-around;
+  }
+}
+
+.beatmaker .container .beat-block .controls .name {
+  font-size: 1.8rem;
+  letter-spacing: 0.05rem;
+  margin-right: 0.5rem;
+}
+
+.beatmaker .container .beat-block .controls .microphone {
+  display: block;
+  width: 3rem;
+  cursor: pointer;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  margin-right: 0.5rem;
+}
+
+.beatmaker .container .beat-block .controls .microphone:hover {
+  opacity: 0.8;
+}
+
+.beatmaker .container .beat-block .controls .beats {
+  position: relative;
+  border: none;
+  padding: 0.5rem;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  border-radius: 10px;
+  min-width: 9rem;
+  outline-color: #0c699e;
+  outline-offset: 0.2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.beatmaker .container .beat-block .pads {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+@media only screen and (min-width: 900px) {
+  .beatmaker .container .beat-block .pads {
+    padding: 0.5rem;
+    flex: 2;
+  }
+}
+
+.beatmaker .container .beat-block .pads .pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 0.5rem;
+  background: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  will-change: transform;
+}
+
+@media only screen and (min-width: 600px) {
+  .beatmaker .container .beat-block .pads .pad {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+.beatmaker .container .beat-block .pads .active-kick-pad {
+  background: #59c3dd;
+}
+
+.beatmaker .container .beat-block .pads .active-snare-pad {
+  background: #dd78bb;
+}
+
+.beatmaker .container .beat-block .pads .active-hihat-pad {
+  background: #6fe295;
+}
+
+.beatmaker .container .beat-block .pads .active-clap-pad {
+  background: #d66666;
+}
+
+.beatmaker .container .beat-block .pads .active-perc-pad {
+  background: #c3e072;
+}
+
+.beatmaker .container .beat-block .pads .active-tom-pad {
+  background: #dfad75;
+}
+
+@media only screen and (min-width: 600px) {
+  .beatmaker .container .beat-block {
+    flex-direction: row;
+  }
+}
+
+.beatmaker .container .player-wrapper {
+  width: 100vw;
+  position: fixed;
+  top: 40%;
+  left: -100%;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@media only screen and (min-width: 900px) {
+  .beatmaker .container .player-wrapper {
+    width: 100%;
+    position: static;
+    margin-top: 2rem;
+  }
+}
+
+.beatmaker .container .player-wrapper .player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #0c699e;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 100%;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@media only screen and (min-width: 900px) {
+  .beatmaker .container .player-wrapper .player {
+    background: rgba(12, 105, 158, 0.4);
+    width: 40%;
+    margin: auto;
+    padding: 1rem 0rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.beatmaker .container .player-wrapper .player .player-btn-img {
+  width: 4rem;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.beatmaker .container .player-wrapper .player .player-btn-img:hover {
+  opacity: 0.8;
+}
+
+@media only screen and (min-width: 600px) {
+  .beatmaker .container .player-wrapper .player .player-btn-img {
+    width: 5rem;
+  }
+}
+
+.beatmaker .container .player-wrapper .player .player-tempo {
+  appearance: none;
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.2rem;
+  width: 100%;
+  outline-color: #0c699e;
+  outline-offset: 0.2rem;
+  margin-bottom: 1.5rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .beatmaker .container .player-wrapper .player .player-tempo {
+    padding: 0.4rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .beatmaker .container .player-wrapper .player .player-tempo {
+    width: 70%;
+    padding: 0.1rem;
+  }
+}
+
+.beatmaker .container .player-wrapper .player .tempo {
+  color: #fff;
+}
+
+@media only screen and (min-width: 600px) {
+  .beatmaker .container .player-wrapper .player .tempo {
+    font-size: 1.1rem;
+  }
+}
+
+.beatmaker .container .player-wrapper .player .close-btn {
+  width: 1.5rem;
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 900px) {
+  .beatmaker .container .player-wrapper .player .close-btn {
+    display: none;
+  }
+}
+
+.beatmaker .container .player-wrapper .slide-arrow {
+  position: absolute;
+  top: 35%;
+  left: 100%;
+  width: 3.3rem;
+  margin-left: 0.5rem;
+}
+
+.beatmaker .container .open-player {
+  left: 0;
+}
+
+.main-footer {
+  text-align: center;
+  background: #02476e;
+  color: #fff;
+}
+
+.main-footer .footer-text {
+  font-size: 1rem;
+  padding: 2rem;
+  letter-spacing: 0.3px;
+}
+/*# sourceMappingURL=style.css.map */
