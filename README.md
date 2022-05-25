@@ -10,6 +10,3 @@ We can also change the tempo and have fun.
 - CSS
 - Javascript
 
-### A little glimpse of it:
-
-![](./BeatMaker-screenshot.png)
